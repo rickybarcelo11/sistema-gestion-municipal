@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <!-- Navbar moderna -->
   <nav class="navbar">
     <div class="navbar-logo">🌍 Gestión Municipal</div>
     <div class="navbar-links">
@@ -20,12 +21,63 @@
   </nav>
 
   <main class="content">
-    <h1 class="page-title">Informes y Estadísticas</h1>
-    <div id="informes-content" class="cards-container">
-      <!-- Aquí se cargarán los reportes -->
-    </div>
-  </main>
+    <h1 class="page-title">Panel de Informes y Estadísticas</h1>
 
-  <script type="module" src="/src/js/informes.js"></script>
+    <!-- Tarjetas estadísticas -->
+    <div class="stats-cards">
+      <div class="stat-card">
+        <h2>🏗️ Tareas realizadas</h2>
+        <p>50 de 100 (50%)</p>
+      </div>
+      <div class="stat-card">
+        <h2>📅 Efectividad mensual</h2>
+        <p>Marzo 2025: 80%</p>
+      </div>
+      <div class="stat-card">
+        <h2>🛠️ Tareas activas</h2>
+        <p>12 en progreso</p>
+      </div>
+    </div>
+
+    <!-- Espacio reservado para gráfico -->
+    <div class="graph-container">
+      <h2>📊 Evolución de tareas completadas por mes</h2>
+      <div id="chart-placeholder" style="width: 100%; height: 400px; background: #2c2c2c; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+        <span style="color: gray;">[ Gráfico próximamente aquí ]</span>
+      </div>
+    </div>
+
+    <!-- Historial de actividades -->
+    <div class="history-section">
+      <h2>📜 Historial de Actividades</h2>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Actividad</th>
+            <th>Sector</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-04-01</td>
+            <td>Poda de árboles</td>
+            <td>Sector Norte</td>
+          </tr>
+          <tr>
+            <td>2025-04-05</td>
+            <td>Corte de pasto</td>
+            <td>Sector Sur</td>
+          </tr>
+          <tr>
+            <td>2025-04-10</td>
+            <td>Poda de ramas peligrosas</td>
+            <td>Sector Este</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
 </body>
 </html>

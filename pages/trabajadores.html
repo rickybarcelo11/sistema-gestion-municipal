@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <!-- Navbar moderna -->
   <nav class="navbar">
     <div class="navbar-logo">🌍 Gestión Municipal</div>
     <div class="navbar-links">
@@ -21,11 +22,46 @@
 
   <main class="content">
     <h1 class="page-title">Listado de Trabajadores</h1>
-    <div id="trabajadores-list" class="cards-container">
-      <!-- Aquí se cargarán los trabajadores -->
+
+    <!-- Tabla de trabajadores -->
+    <div class="table-container">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody id="trabajadores-body">
+          <!-- Aquí se cargarán dinámicamente los trabajadores -->
+        </tbody>
+      </table>
     </div>
+
   </main>
 
   <script type="module" src="/src/js/trabajadores.js"></script>
+
+  <!-- Lógica simple para mostrar trabajadores de ejemplo -->
+  <script>
+    const trabajadores = [
+      { id: 1, nombre: "Juan Pérez", observaciones: "Actualmente en poda" },
+      { id: 2, nombre: "María González", observaciones: "En corte de pasto" },
+      { id: 3, nombre: "Carlos Díaz", observaciones: "Apoyo en poda" }
+    ];
+
+    const tbody = document.getElementById('trabajadores-body');
+
+    trabajadores.forEach(trabajador => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${trabajador.id}</td>
+        <td>${trabajador.nombre}</td>
+        <td>${trabajador.observaciones}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  </script>
 </body>
 </html>

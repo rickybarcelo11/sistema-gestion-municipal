@@ -43,7 +43,7 @@ export class FormularioSector {
                 label: 'Tipo de tarea',
                 type: 'select',
                 name: 'tipoTarea',
-                options: ['Poda', 'Corte de pasto', 'Recolección', 'Limpieza', 'Otro'],
+                options: ['Poda', 'Corte de pasto'],
                 required: true
             },
             {

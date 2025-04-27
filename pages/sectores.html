@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <!-- Navbar moderna -->
   <nav class="navbar">
     <div class="navbar-logo">🌍 Gestión Municipal</div>
     <div class="navbar-links">
@@ -20,16 +21,56 @@
   </nav>
 
   <main class="content">
-    <h1 class="page-title">Sectores Registrados</h1>
+    <h1 class="page-title">Sectores Municipales</h1>
+
+    <!-- Pestañas de navegación -->
+    <div class="tabs">
+      <button class="tab-button active" data-type="poda">Poda</button>
+      <button class="tab-button" data-type="corte">Corte de Pasto</button>
+    </div>
+
+    <!-- Contenedor dinámico de sectores -->
     <div id="sectores-list" class="cards-container">
-      <!-- Aquí se inyectarán las tarjetas de sectores dinámicamente -->
+      <!-- Aquí se mostrarán las tarjetas dinámicamente -->
     </div>
   </main>
 
-  <button class="fab" id="nuevo-sector">
-    ➕ Nuevo Sector
-  </button>
-
   <script type="module" src="/src/js/sectores.js"></script>
+
+  <!-- Lógica simple para cambiar pestañas -->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const sectoresList = document.getElementById('sectores-list');
+
+    let sectores = [
+      { id: 1, nombre: "Sector Norte", tipo: "poda" },
+      { id: 2, nombre: "Sector Sur", tipo: "corte" },
+      { id: 3, nombre: "Sector Este", tipo: "poda" },
+      { id: 4, nombre: "Sector Oeste", tipo: "corte" }
+    ];
+
+    function renderSectores(tipo) {
+      sectoresList.innerHTML = "";
+      sectores
+        .filter(sector => sector.tipo === tipo)
+        .forEach(sector => {
+          const card = document.createElement('div');
+          card.className = "card";
+          card.innerHTML = `<h3>${sector.nombre}</h3><p>Tipo de tarea: ${sector.tipo === 'poda' ? 'Poda' : 'Corte de pasto'}</p>`;
+          sectoresList.appendChild(card);
+        });
+    }
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        renderSectores(button.dataset.type);
+      });
+    });
+
+    // Mostrar poda por defecto
+    renderSectores('poda');
+  </script>
 </body>
 </html>
