@@ -224,3 +224,135 @@ body {
         grid-template-columns: 1fr;
     }
 } 
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  
+  .navbar-logo {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-links a {
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #4caf50;
+  }
+  
+  /* Contenido */
+  .content {
+    margin-top: 80px; /* Dejar espacio para la navbar */
+    padding: 20px;
+    color: white;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .page-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Contenedor de tarjetas */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Botón flotante */
+  .fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(45deg, #4caf50, #81c784);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1000;
+  }
+  
+  .fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Botón de herramientas flotante */
+.tools-button {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background: linear-gradient(45deg, #4caf50, #81c784);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+  }
+  
+  .tools-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Menú de herramientas */
+  .tools-menu {
+    position: fixed;
+    top: 160px;
+    right: 30px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .tools-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tools-menu li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .tools-menu li:hover {
+    background: #4caf50;
+  }
+  

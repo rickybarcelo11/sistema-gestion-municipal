@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Sectores - Sistema Municipal</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sectores - Sistema de Gestión Municipal</title>
+  <link rel="stylesheet" href="/src/css/styles.css" />
 </head>
+
 <body>
-    <a href="/pages/index.html" class="return-button">Inicio</a>
-    <header>
-        <h1>Gestión de Sectores</h1>
-    </header>
-    <main>
-        <!-- Contenido específico de gestión de tareas -->
-    </main>
-    <script type="module" src="/src/js/app.js"></script>
+  <nav class="navbar">
+    <div class="navbar-logo">🌍 Gestión Municipal</div>
+    <div class="navbar-links">
+      <a href="/pages/index.html">Inicio</a>
+      <a href="/pages/sectores.html">Sectores</a>
+      <a href="/pages/trabajadores.html">Trabajadores</a>
+      <a href="/pages/arboles.html">Árboles</a>
+      <a href="/pages/informes.html">Informes</a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <h1 class="page-title">Sectores Registrados</h1>
+    <div id="sectores-list" class="cards-container">
+      <!-- Aquí se inyectarán las tarjetas de sectores dinámicamente -->
+    </div>
+  </main>
+
+  <button class="fab" id="nuevo-sector">
+    ➕ Nuevo Sector
+  </button>
+
+  <script type="module" src="/src/js/sectores.js"></script>
 </body>
-</html> 
+</html>

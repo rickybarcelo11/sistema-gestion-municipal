@@ -3,32 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistema de Gestión Municipal</title>
+  <title>Inicio - Sistema de Gestión Municipal</title>
   <link rel="stylesheet" href="/src/css/styles.css" />
 </head>
+
 <body>
-  <!-- Menú de navegación -->
-  <nav class="nav-menu">
-    <div class="nav-container">
-      <a href="/pages/sectores.html" class="nav-link">Sectores</a>
-      <a href="/pages/tareas.html" class="nav-link">Tareas</a>
-      <a href="/pages/arboles.html" class="nav-link">Árboles</a>
-      <a href="/pages/trabajadores.html" class="nav-link">Trabajadores</a>
-      <a href="/pages/informes.html" class="nav-link">Informes</a>
+  <!-- Navbar moderna -->
+  <nav class="navbar">
+    <div class="navbar-logo">🌍 Gestión Municipal</div>
+    <div class="navbar-links">
+      <a href="/pages/index.html">Inicio</a>
+      <a href="/pages/sectores.html">Sectores</a>
+      <a href="/pages/trabajadores.html">Trabajadores</a>
+      <a href="/pages/arboles.html">Árboles</a>
+      <a href="/pages/informes.html">Informes</a>
     </div>
   </nav>
 
-  <!-- Contenedor principal del mapa -->
-  <div id="map"></div>
+  <!-- Contenedor del mapa -->
+  <main class="content">
+    <div id="map" style="width: 100%; height: 800px; background: #333;"></div>
 
-  <!-- Mensaje de error (inicialmente oculto) -->
-  <div id="error-message" class="error-message" style="display: none;">
-    Error al cargar el mapa. Por favor, verifica tu conexión a internet.
+    <!-- Mensaje de error oculto -->
+    <div id="error-message" class="error-message" style="display: none;">
+      Error al cargar el mapa. Por favor, verifica tu conexión a internet.
+    </div>
+  </main>
+
+  <!-- Botón flotante de herramientas -->
+  <div class="tools-button" id="toolsButton">
+    🔧
   </div>
 
-  <!-- Botón flotante para nuevo sector -->
-  <button id="nuevoSector" class="floating-button">+ Nuevo sector</button>
+  <!-- Menú de herramientas oculto -->
+  <div class="tools-menu" id="toolsMenu" style="display: none;">
+    <ul>
+      <li id="new-sector">➕ Nuevo Sector</li>
+      <li id="assign-worker">👷 Asignar Trabajador</li>
+      <li id="add-tree">🌳 Agregar Árbol</li>
+      <!-- Más opciones a futuro -->
+    </ul>
+  </div>
 
   <script type="module" src="/src/js/app.js"></script>
+  <script>
+    // Lógica simple para mostrar/ocultar menú de herramientas
+    const toolsButton = document.getElementById('toolsButton');
+    const toolsMenu = document.getElementById('toolsMenu');
+
+    toolsButton.addEventListener('click', () => {
+      toolsMenu.style.display = (toolsMenu.style.display === 'none') ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>

@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportes - Sistema Municipal</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informes - Sistema de Gestión Municipal</title>
+  <link rel="stylesheet" href="/src/css/styles.css" />
 </head>
+
 <body>
-    <a href="/pages/index.html" class="return-button">Inicio</a>
-    <header>
-        <h1>Reportes</h1>
-    </header>
-    <main>
-        <!-- Contenido específico de reportes -->
-    </main>
-    <script type="module" src="/src/js/app.js"></script>
+  <nav class="navbar">
+    <div class="navbar-logo">🌍 Gestión Municipal</div>
+    <div class="navbar-links">
+      <a href="/pages/index.html">Inicio</a>
+      <a href="/pages/sectores.html">Sectores</a>
+      <a href="/pages/trabajadores.html">Trabajadores</a>
+      <a href="/pages/arboles.html">Árboles</a>
+      <a href="/pages/informes.html">Informes</a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <h1 class="page-title">Informes y Estadísticas</h1>
+    <div id="informes-content" class="cards-container">
+      <!-- Aquí se cargarán los reportes -->
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/informes.js"></script>
 </body>
-</html> 
+</html>
