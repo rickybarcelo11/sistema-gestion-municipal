@@ -29,6 +29,37 @@
       Error al cargar el mapa. Por favor, verifica tu conexión a internet.
     </div>
   </main>
+  <!-- Menú flotante lateral derecho -->
+  <div id="menu-flotante" class="menu-flotante oculto">
+    <button id="boton-toggle-menu" class="boton-toggle">☰</button>
+
+    <div class="menu-contenido">
+      <h3>Herramientas</h3>
+
+      <div class="menu-opcion">
+        <input type="checkbox" id="mostrarPoda" checked>
+        <label for="mostrarPoda">Ver sectores de poda</label>
+      </div>
+
+      <div class="menu-opcion">
+        <input type="checkbox" id="mostrarCorte" checked>
+        <label for="mostrarCorte">Ver sectores de corte de pasto</label>
+      </div>
+
+      <hr>
+
+      <div class="menu-opcion">
+        <button id="nuevoSectorBtn">➕ Nuevo sector</button>
+      </div>
+
+      <hr>
+
+      <div class="menu-opcion">
+        <input type="text" id="busquedaSector" placeholder="Buscar sector...">
+        <ul id="resultadosBusqueda"></ul>
+      </div>
+    </div>
+  </div>
 
   <!-- Botón flotante de herramientas -->
   <div class="tools-button" id="toolsButton">
