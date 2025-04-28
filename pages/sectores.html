@@ -35,19 +35,18 @@
     </div>
   </main>
 
+  
   <script type="module" src="/src/js/sectores.js"></script>
+  <div id="sectores-list" class="cards-container"></div>
+
 
   <!-- Lógica simple para cambiar pestañas -->
   <script>
     const tabButtons = document.querySelectorAll('.tab-button');
     const sectoresList = document.getElementById('sectores-list');
 
-    let sectores = [
-      { id: 1, nombre: "Sector Norte", tipo: "poda" },
-      { id: 2, nombre: "Sector Sur", tipo: "corte" },
-      { id: 3, nombre: "Sector Este", tipo: "poda" },
-      { id: 4, nombre: "Sector Oeste", tipo: "corte" }
-    ];
+    
+
 
     function renderSectores(tipo) {
       sectoresList.innerHTML = "";
