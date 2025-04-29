@@ -467,9 +467,10 @@ body {
   /* Menú flotante */
   .menu-flotante {
     position: fixed;
-    top: 80px; /* Antes estaba en 20px */
+    top: 150px; /* Antes estaba en 20px */
     right: 0;
-    width: 250px;
+  
+    width: 400px;
     background-color: rgba(30, 30, 30, 0.95);
     color: white;
     padding: 20px;
